@@ -1,4 +1,4 @@
-name: Cypress Bootstrap CI/CD
+name: Cypress runner CI/CD
 
 on: [push]
 
@@ -9,5 +9,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Cypress install
+        run: npm install
       - name: Cypress run all tests
-        uses: cypress-io/github-action@v4
+        run: npm run cy:run:login
