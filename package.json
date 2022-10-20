@@ -1,0 +1,38 @@
+{
+  "name": "cypress-cucumber",
+  "version": "2.0.0",
+  "description": "Cypress bootstrap with TS and Cucumber",
+  "scripts": {
+    "cy:run": "cypress run --reporter mochawesome",
+    "cy:run:headed": "cypress run --reporter mochawesome --headed",
+    "cy:chrome:headed": "cypress run --reporter mochawesome --browser chrome --headed",
+    "cy:chrome": "cypress run --reporter mochawesome --browser chrome --headless",
+    "cy:open": "cypress open",
+    "cy:run:smoke": "cypress run --env tags=@smoke --headed --reporter mochawesome",
+    "cy:run:login": "cypress run --env tags=@login --headless --reporter mochawesome",
+    "cy:lint": "eslint --fix --ext .ts ."
+  },
+  "dependencies": {
+    "ts-loader": "9.3.1",
+    "webpack": "5.74.0"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "12.0.0",
+    "@cypress/webpack-preprocessor": "5.12.0",
+    "@typescript-eslint/eslint-plugin": "5.40.1",
+    "cypress": "10.3.1",
+    "cypress-cucumber-tagging": "1.0.3",
+    "eslint": "8.25.0",
+    "eslint-config-standard-with-typescript": "23.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.3.0",
+    "eslint-plugin-promise": "6.1.0",
+    "mochawesome": "7.1.3",
+    "typescript": "4.8.4"
+  },
+  "author": "MB",
+  "license": "MIT",
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/test/step_definitions/**/*.{js,ts}"
+  }
+}

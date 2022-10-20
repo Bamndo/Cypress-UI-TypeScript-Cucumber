@@ -1,0 +1,15 @@
+### CypressIO ###
+results/
+fixtures/
+reports
+screenshots/
+videos/
+cucumber-json/
+reports/my-test-output.xml
+## cypress.env.json do NOT share this in a real project
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
