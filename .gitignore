@@ -6,6 +6,7 @@ screenshots/
 videos/
 cucumber-json/
 reports/my-test-output.xml
+package-lock.json
 ## cypress.env.json do NOT share this in a real project
 
 # Dependency directories

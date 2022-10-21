@@ -1,4 +1,11 @@
 # 🌲 Cypress with Cucumber and TypeScript
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Bamndo_Cypress-UI-TypeScript-Cucumber&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=Bamndo_Cypress-UI-TypeScript-Cucumber)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Bamndo_Cypress-UI-TypeScript-Cucumber&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Bamndo_Cypress-UI-TypeScript-Cucumber)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Bamndo_Cypress-UI-TypeScript-Cucumber&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Bamndo_Cypress-UI-TypeScript-Cucumber)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Bamndo_Cypress-UI-TypeScript-Cucumber&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Bamndo_Cypress-UI-TypeScript-Cucumber)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Bamndo_Cypress-UI-TypeScript-Cucumber&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=Bamndo_Cypress-UI-TypeScript-Cucumber)
+
+
 
 This project is a example to start automating with Cypress framework with TypeScript.
 
