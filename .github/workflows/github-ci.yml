@@ -12,4 +12,4 @@ jobs:
       - name: Cypress install
         run: npm install
       - name: Cypress run all tests
-        run: npm run cy:run:login
+        run: npm run cy:chrome
