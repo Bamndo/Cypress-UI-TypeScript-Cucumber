@@ -10,6 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Cypress install
-        run: npm install
+        run: sudo npm install
       - name: Cypress run all tests
-        run: npm run cy:chrome
+        run: sudo npm run cy:chrome
