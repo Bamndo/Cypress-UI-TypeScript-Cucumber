@@ -18,7 +18,10 @@ jobs:
         with:
           command: npm run cy:run:cicd
       - name: Deploy report 📈
-        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        uses: JamesIves/github-pages-deploy-action@4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./reports/index.html
+         branch: gh-pages
+         folder: ./cypress/reports/index.html
+         clean: true
+         
