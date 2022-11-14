@@ -1,9 +1,10 @@
 {
-  "name": "cypress-cucumber",
-  "version": "2.0.0",
-  "description": "Cypress bootstrap with TS and Cucumber",
+  "name": "cypress-cucumber-ts",
+  "version": "3.0.0",
+  "description": "Cypress template with TS and Cucumber",
   "scripts": {
     "cy:run": "cypress run --reporter mochawesome",
+    "cy:run:cicd": "cypress run --headless --browser chrome --reporter mochawesome",
     "cy:run:headed": "cypress run --reporter mochawesome --headed",
     "cy:chrome:headed": "cypress run --reporter mochawesome --browser chrome --headed",
     "cy:chrome": "cypress run --reporter mochawesome --browser chrome --headless",
