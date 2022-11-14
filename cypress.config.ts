@@ -67,9 +67,9 @@ export default defineConfig({
   reporterOptions: {
     reportDir: 'cypress/reports',
     overwrite: true,
-    charts: true,
-    reportFilename: "[status]_[datetime]-[name]-report",
-    timestamp: "longDate"
+    charts: false,
+    reportFilename: "index",
+    JSON: false
   },
   video: false
 });
