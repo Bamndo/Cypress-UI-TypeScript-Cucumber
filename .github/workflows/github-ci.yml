@@ -9,7 +9,7 @@ jobs:
       image: cypress/browsers:node16.17.0-chrome106
       options: --user 1001
     steps:
-      - name: Checkout
+      - name: Checkout 📦
         uses: actions/checkout@v3
       - name: Cypress install
         run: npm install
@@ -17,3 +17,8 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           command: npm run cy:run:cicd
+      - name: Deploy report 📈
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./public
