@@ -68,8 +68,8 @@ export default defineConfig({
     reportDir: 'cypress/reports',
     overwrite: true,
     charts: false,
-    reportFilename: "[status]_[datetime]-[name]-report",
-    timestamp: "longDate"
+    reportFilename: "index",
+    JSON: false
   },
   video: false
 });
