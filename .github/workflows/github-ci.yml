@@ -17,3 +17,9 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           command: npm run cy:run:cicd
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.1
+        with:
+         name: cypress-report
+         path: cypress/reports
+         
