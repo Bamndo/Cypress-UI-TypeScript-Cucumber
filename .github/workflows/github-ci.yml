@@ -1,16 +1,12 @@
 name: Cypress runner CI/CD
+permissions:
+  contents: write
 
 on: [push]
 
 jobs:
-  permissions:
-    pages: write
-    id-token: write
-
     cypress-run:
       runs-on: ubuntu-22.04
-      permissions:
-      contents: write
       container:
         image: cypress/browsers:node16.17.0-chrome106
         options: --user 1001
@@ -28,11 +24,8 @@ jobs:
           with:
             name: github-pages
             path: cypress/reports
-        - name: Publish test report
-          if: always()
-          uses: JamesIves/github-pages-deploy-action@4.1.4
+        - name: Deploy 🚀
+          uses: JamesIves/github-pages-deploy-action@v4
           with:
-          branch: gh-pages
-          folder: ./
-          clean: true
-          
+           branch: gh-pages
+           folder: 'github-pages'
