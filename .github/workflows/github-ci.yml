@@ -23,5 +23,4 @@ jobs:
          name: github-pages
          path: cypress/reports
       - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v1.2.2
-        
+        uses: actions/deploy-pages@v1.2.2  
