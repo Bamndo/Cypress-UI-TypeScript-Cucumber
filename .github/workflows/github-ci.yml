@@ -2,30 +2,37 @@ name: Cypress runner CI/CD
 
 on: [push]
 
-permissions:
-  pages: write
-  id-token: write
-
 jobs:
-  cypress-run:
-    runs-on: ubuntu-22.04
-    container:
-      image: cypress/browsers:node16.17.0-chrome106
-      options: --user 1001
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Cypress install
-        run: npm install
-      - name: Cypress run all tests 🧪
-        uses: cypress-io/github-action@v4
-        with:
-          command: npm run cy:run:cicd
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.1
-        with:
-         name: github-pages
-         path: cypress/reports
-      - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v1.2.2
-        
+  permissions:
+    pages: write
+    id-token: write
+
+    cypress-run:
+      runs-on: ubuntu-22.04
+      permissions:
+      contents: write
+      container:
+        image: cypress/browsers:node16.17.0-chrome106
+        options: --user 1001
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+        - name: Cypress install
+          run: npm install
+        - name: Cypress run all tests 🧪
+          uses: cypress-io/github-action@v4
+          with:
+            command: npm run cy:run:cicd
+        - name: Upload a Build Artifact
+          uses: actions/upload-artifact@v3.1.1
+          with:
+            name: github-pages
+            path: cypress/reports
+        - name: Publish test report
+          if: always()
+          uses: JamesIves/github-pages-deploy-action@4.1.4
+          with:
+          branch: gh-pages
+          folder: ./
+          clean: true
+          
