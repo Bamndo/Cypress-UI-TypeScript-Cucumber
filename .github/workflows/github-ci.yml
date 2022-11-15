@@ -24,6 +24,10 @@ jobs:
           with:
             name: github-pages
             path: cypress/reports
+        - name: Download Artifact
+          uses: actions/download-artifact@v1
+          with:
+           name: github-pages
         - name: Deploy 🚀
           uses: JamesIves/github-pages-deploy-action@v4
           with:
