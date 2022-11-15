@@ -22,6 +22,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
          branch: gh-pages
-         folder: ./reports
+         folder: ./Cypress-UI-TypeScript-Cucumber/cypress/reports
          clean: true
          
