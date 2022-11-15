@@ -19,17 +19,9 @@ jobs:
           uses: cypress-io/github-action@v4
           with:
             command: npm run cy:run:cicd
-        - name: Upload a Build Artifact
-          uses: actions/upload-artifact@v3.1.1
+        - name: GH Pages Push
+          uses: PavanMudigonda/html-reporter-github-pages/composite@v1.1
           with:
-            name: github-pages
-            path: cypress/reports
-        - name: Download Artifact
-          uses: actions/download-artifact@v1
-          with:
-           name: github-pages
-        - name: Deploy 🚀
-          uses: JamesIves/github-pages-deploy-action@v4
-          with:
-           branch: gh-pages
-           folder: 'github-pages'
+           test_results: reports
+           keep_reports: 20
+           
